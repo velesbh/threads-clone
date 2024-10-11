@@ -50,14 +50,7 @@ const HomePage: React.FC = () => {
               <div key={index} className={cn({ 'mb-[10vh]': index == allPosts.length - 1 })}>
                 <PostCard {...post} />
                 {index !== allPosts.length - 1 && <Separator />}
-              </div>
-            );
-          })}
-        </div>
-      </InfiniteScroll>
-      <div className='fixed bottom-10 left-[8%] rounded-full py-6 px-8'>
-        <StarOnGithub />
-      </div>
+
     </>
   )
 }
