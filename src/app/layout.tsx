@@ -18,19 +18,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://threads.codebustar.com'),
+  metadataBase: new URL('https://ignite.codebustar.com'),
   title: {
-    default: siteConfig.name,
-    template: `%s • ${siteConfig.name}`,
+    default: "Ignite",
+    template: `%s • Ignite`,
   },
-  description: siteConfig.description,
+  description: "Ignite - Clone of Threads by Meta, built with Next.js, Clerk, and NeonDB.",
   keywords: [
     "nextjs",
     "prisma",
     "tRPC",
-    "sujjeee",
-    "threads",
-    "threads-clone",
+    "ignite",
+    "ignite-clone",
     "t3-stack",
     "uploadthing",
     "shadcn ui"
@@ -45,15 +44,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: siteConfig.url,
-    title: siteConfig.name,
-    description: siteConfig.description,
-    siteName: siteConfig.name,
+    url: "https://ignite.codebustar.com",
+    title: "Ignite",
+    description: "Ignite - Clone of Threads by Meta, built with Next.js, Clerk, and NeonDB.",
+    siteName: "Ignite",
   },
   twitter: {
     card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
+    title: "Ignite",
+    description: "Ignite - Clone of Threads by Meta, built with Next.js, Clerk, and NeonDB.",
     images: [siteConfig.ogImage],
     creator: "@sujjeeee",
   },
