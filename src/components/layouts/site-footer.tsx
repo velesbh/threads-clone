@@ -8,29 +8,29 @@ export default function SiteFooter() {
             <ul className="flex text-center flex-wrap justify-center gap-4 text-xs ">
                 <li>
                     <a href="#" className="text-gray-500 transition hover:opacity-75">
-                        © 2023
+                        © 2024
                     </a>
                 </li>
                 <li>
                     <a href="#" className="text-gray-500 transition hover:opacity-75">
-                        Threads Terms
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#" className="text-gray-500 transition hover:opacity-75">
-                        Privacy Policy
+                        Enzonic Services
                     </a>
                 </li>
 
                 <li>
                     <a href="#" className="text-gray-500 transition hover:opacity-75">
-                        Cookies Policy
+                        IGNITE
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" className="text-gray-500 transition hover:opacity-75">
+                        Enzonic App ID:11
                     </a>
                 </li>
                 <li>
                     <a href="#" className="text-gray-500 transition hover:opacity-75">
-                        Report a problem
+                        Join discord: https://discord.gg/M4Dz3Gj5tR
                     </a>
                 </li>
             </ul>
