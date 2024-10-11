@@ -30,28 +30,30 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      <div className='w-full sm:flex hidden'>
-        <CreateWithInput onClick={() => setOpenDialog(true)} />
-      </div>
-      <InfiniteScroll
-        dataLength={allPosts?.length ?? 0}
-        next={fetchNextPage}
-        hasMore={hasNextPage ?? false}
-        loader={
-          <div className="h-[100px] w-full justify-center items-center flex mb-[10vh] sm:mb-0">
-            <Icons.loading className='h-11 w-11' />
-          </div>
-        }
-      >
-        <div>
-          {allPosts?.map((post, index) => (
-            <div key={index} className={cn({ 'mb-[10vh]': index == allPosts.length - 1 })}>
-              <PostCard {...post} />
-              {index !== allPosts.length - 1 && <Separator />}
-            </div>
-          ))}
+      <div className='w-full'>
+        <div className='sm:flex hidden'>
+          <CreateWithInput onClick={() => setOpenDialog(true)} />
         </div>
-      </InfiniteScroll>
+        <InfiniteScroll
+          dataLength={allPosts?.length ?? 0}
+          next={fetchNextPage}
+          hasMore={hasNextPage ?? false}
+          loader={
+            <div className="h-[100px] w-full justify-center items-center flex mb-[10vh] sm:mb-0">
+              <Icons.loading className='h-11 w-11' />
+            </div>
+          }
+        >
+          <div>
+            {allPosts?.map((post, index) => (
+              <div key={index} className={cn({ 'mb-[10vh]': index == allPosts.length - 1 })}>
+                <PostCard {...post} />
+                {index !== allPosts.length - 1 && <Separator />}
+              </div>
+            ))}
+          </div>
+        </InfiniteScroll>
+      </div>
       <StarOnGithub />
     </>
   )
