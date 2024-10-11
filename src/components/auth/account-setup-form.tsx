@@ -137,7 +137,7 @@ export default function AccountSetupForm({ username }: { username: string }) {
                                     Profile
                                 </h2>
                                 <span className="leading-7 text-muted-foreground ">
-                                    Customize your Threads profile
+                                    Customize your Ignite profile
                                 </span>
                                 <Card className='w-full p-6 px-8 bg-transparent rounded-2xl my-4 sm:mt-10'>
                                     <div className="flex flex-col gap-4">
