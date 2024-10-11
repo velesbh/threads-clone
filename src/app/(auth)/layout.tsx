@@ -1,6 +1,4 @@
-import Banner from "@/components/threads-banner"
 import SiteFooter from "@/components/layouts/site-footer"
-import QRcode from "@/components/qr-code"
 import { currentUser } from "@clerk/nextjs"
 import { redirect } from "next/navigation"
 
