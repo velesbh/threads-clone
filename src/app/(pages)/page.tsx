@@ -21,7 +21,6 @@ const HomePage: React.FC = () => {
     getNextPageParam: (lastPage) => lastPage.nextCursor,
     trpc: { abortOnUnmount: true },
     staleTime: 10 * 60 * 1000
-
   })
 
   const allPosts = data?.pages.flatMap((page) => page.posts)
@@ -31,7 +30,7 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      <div className='w-full sm:flex hidden '>
+      <div className='w-full sm:flex hidden'>
         <CreateWithInput onClick={() => setOpenDialog(true)} />
       </div>
       <InfiniteScroll
@@ -39,18 +38,21 @@ const HomePage: React.FC = () => {
         next={fetchNextPage}
         hasMore={hasNextPage ?? false}
         loader={
-          <div className="h-[100px] w-full justify-center items-center flex  mb-[10vh] sm:mb-0">
+          <div className="h-[100px] w-full justify-center items-center flex mb-[10vh] sm:mb-0">
             <Icons.loading className='h-11 w-11' />
           </div>
         }
       >
         <div>
-          {allPosts?.map((post, index) => {
-            return (
-              <div key={index} className={cn({ 'mb-[10vh]': index == allPosts.length - 1 })}>
-                <PostCard {...post} />
-                {index !== allPosts.length - 1 && <Separator />}
-
+          {allPosts?.map((post, index) => (
+            <div key={index} className={cn({ 'mb-[10vh]': index == allPosts.length - 1 })}>
+              <PostCard {...post} />
+              {index !== allPosts.length - 1 && <Separator />}
+            </div>
+          ))}
+        </div>
+      </InfiniteScroll>
+      <StarOnGithub />
     </>
   )
 }
