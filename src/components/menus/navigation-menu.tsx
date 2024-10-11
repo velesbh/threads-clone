@@ -44,7 +44,7 @@ export default function NavigationMenu() {
                     <DropdownMenuItem
                         className='focus:bg-transparent px-4 tracking-normal select-none font-semibold py-3 cursor-pointer text-[15px] active:bg-primary-foreground rounded-none'
                     >
-                        Report a problem
+                        ----------
                     </DropdownMenuItem>
                     <DropdownMenuSeparator className='h-[1.2px] my-0' />
                     <DropdownMenuItem
